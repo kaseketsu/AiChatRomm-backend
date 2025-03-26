@@ -1,0 +1,25 @@
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306
+    username: root
+    password: 123456
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+# 接口文档
+knife4j:
+  enable: true
+  openapi:
+    title: 小花的接口文档
+    group:
+      default:
+        group-name: 默认分组
+        api-rule: package
+        api-rule-resources:
+          - com.itflower.flowerhaiguisoup.controller
+## 接入 AI 大模型
+model:
+  apiKey: yourApiKey
